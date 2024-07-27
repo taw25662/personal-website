@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trevors Website</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo"></div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#heroElement">Home</a></li>
+                    <li><a href="#aboutMeElement">About</a></li>
+                    <li><a href="#mySkillsElement">Skills</a></li>
+                    <li><a href="#experienceElement">Experience</a></li>
+                    <li><a href="#servicesElement">Services</a></li>
+                    <li><a href="#contactMeElement">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="hidden-menu">
+                <ul>
+                    <li><a href="#heroElement">Home</a></li>
+                    <li><a href="#aboutMeElement">About</a></li>
+                    <li><a href="#mySkillsElement">Skills</a></li>
+                    <li><a href="#experienceElement">Experience</a></li>
+                    <li><a href="#servicesElement">Services</a></li>
+                    <li><a href="#contactMeElement">Contact</a></li>
+                </ul>
+            </div>
+            <div class="overlay"></div> 
+        </header>
+
+        <section id="heroElement" class="hero-page">
+            <div class="name-container">
+                <div class="first-name">
+                    <span class="letter">T</span>
+                    <span class="letter">r</span>
+                    <span class="letter">e</span>
+                    <span class="letter">v</span>
+                    <span class="letter">o</span>
+                    <span class="letter">r</span>
+                </div>
+                <div class="last-name">
+                    <span class="letter">W</span>
+                    <span class="letter">h</span>
+                    <span class="letter">i</span>
+                    <span class="letter">t</span>
+                    <span class="letter">a</span>
+                    <span class="letter">k</span>
+                    <span class="letter">e</span>
+                    <span class="letter">r</span>
+                </div>
+            </div>
+            <div class="title-fade">
+                <h1 class="title">Full-Stack Web Development Consultant & Mentor</h1>
+            </div>
+            <button id="aboutButton" class="hero-buttons hidden-buttons">About Me</button>
+            <button id="projectsButton" class="hero-buttons hidden-buttons">Latest Projects</button>
+            <button id="scheduleButton" class="hero-buttons">Schedule a Consultation</button>
+            <div class="socials">
+                <a href="mailto:trevorwebdev@gmail.com">
+                    <svg class="social-logos gmail" fill="#000000" width="50px" height="50px" viewBox="0 0 32 32" version="1.1"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>gmail</title> <path d="M30.996 7.824v17.381c0 0 0 0 0 0.001 0 1.129-0.915 2.044-2.044 2.044-0 0-0 0-0.001 0h-4.772v-11.587l-8.179 6.136-8.179-6.136v11.588h-4.772c0 0 0 0-0 0-1.129 0-2.044-0.915-2.044-2.044 0-0 0-0.001 0-0.001v0-17.381c0-0 0-0.001 0-0.001 0-1.694 1.373-3.067 3.067-3.067 0.694 0 1.334 0.231 1.848 0.619l-0.008-0.006 10.088 7.567 10.088-7.567c0.506-0.383 1.146-0.613 1.84-0.613 1.694 0 3.067 1.373 3.067 3.067v0z"></path> </g></svg>
+                </a>
+                <a href="https://github.com/taw25662" target="_blank">
+                    <svg class="social-logos github" width="50px" height="50px" viewBox="0 0 16 16" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#161514" fill-rule="evenodd" d="M8 1C4.133 1 1 4.13 1 7.993c0 3.09 2.006 5.71 4.787 6.635.35.064.478-.152.478-.337 0-.166-.006-.606-.01-1.19-1.947.423-2.357-.937-2.357-.937-.319-.808-.778-1.023-.778-1.023-.635-.434.048-.425.048-.425.703.05 1.073.72 1.073.72.624 1.07 1.638.76 2.037.582.063-.452.244-.76.444-.935-1.554-.176-3.188-.776-3.188-3.456 0-.763.273-1.388.72-1.876-.072-.177-.312-.888.07-1.85 0 0 .586-.189 1.924.716A6.711 6.711 0 018 4.381c.595.003 1.194.08 1.753.236 1.336-.905 1.923-.717 1.923-.717.382.963.142 1.674.07 1.85.448.49.72 1.114.72 1.877 0 2.686-1.638 3.278-3.197 3.45.251.216.475.643.475 1.296 0 .934-.009 1.688-.009 1.918 0 .187.127.404.482.336A6.996 6.996 0 0015 7.993 6.997 6.997 0 008 1z" clip-rule="evenodd"></path></g></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/trevor-whitaker-6b1307318" target="_blank">
+                    <svg class="social-logos linkedin" fill="#000000" height="50px" width="50px" version="1.1" id="Layer_1" viewBox="-143 145 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M329,145h-432c-22.1,0-40,17.9-40,40v432c0,22.1,17.9,40,40,40h432c22.1,0,40-17.9,40-40V185C369,162.9,351.1,145,329,145z M41.4,508.1H-8.5V348.4h49.9V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7 c18.4,0,29.7,11.9,30.1,27.7C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4 c-14.9,0-23.2,10-27,19.6c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6 c35.5,0,63.3,23,63.3,72.4V508.1z"></path> </g></svg>
+                </a>
+                <a href="https://x.com/trevor_webdev" target="_blank">
+                    <svg class="social-logos twitter" href="https://x.com/trevor_webdev" height=50px width=50px role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                </a>
+              </div>
+         </section>
+
+        <section id="aboutMeElement" class="about-me-page">
+
+        </section>
+
+        <section id="mySkillsElement" class="my-skills-page">
+
+        </section>
+
+        <section id="experienceElement" clas="experience-page">
+            
+        </section>
+
+        <section id="servicesElement" class="services-page">
+
+        </section>
+
+        <section id="contactMeElement" class="contact-me-page">
+
+        </section>
+
+        <footer id="footerElement" class="footer"></footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

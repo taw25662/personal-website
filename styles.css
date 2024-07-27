@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap');
+
+/* General Styles */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: ghostwhite;
+}
+
+section {
+    min-height: 100vh;
+    min-width: 100vw;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: 70px;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
+    background-color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+    background-image: url('logo.png');
+    filter: grayscale(100%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 25px;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex; 
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    margin: 25px;
+    padding: 0;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Styles for .menu-toggle and .hidden-menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+    z-index: 1000;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+.hidden-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    background-color: transparent;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.hidden-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.hidden-menu li {
+    margin: 20px 0;
+    border-radius: 6px;
+    background-color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    min-width: 161px;
+}
+
+.hidden-menu a {
+    display: block;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9); 
+    backdrop-filter: blur(10px); 
+    z-index: 800; 
+}
+
+.hidden-menu.active + .overlay {
+    display: block;
+}
+
+
+@media (max-width: 1022px) {
+    .menu {
+        display: none; 
+    }
+
+    .menu-toggle {
+        display: flex; 
+    }
+
+    .hidden-menu.active {
+        display: block; 
+        width: 20vw;
+        right: 0;
+    }
+}
+
+/* Styles for Hero Section */
+
+.name-container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+}
+
+.letter {
+    display: inline-block;
+    font-family: 'Fraunces';
+    font-size: calc(1rem + 9vw);
+    margin: -0.4vw;
+    color: black;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 
+        4px 4px 8px rgba(0, 0, 0, 0.3), 
+        8px 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.first-name, .last-name {
+    display: flex;
+    flex-direction: row;
+}
+
+.letter:hover {
+    cursor: pointer;
+    animation: bounce 0.5s ease-out;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(0.7vw) scaleX(1.1);
+    }
+    50% {
+        transform: translateY(-0.7vw) scaleX(0.9);
+    }
+    70% {
+        transform: translateY(0.3vw) scaleX(1.05);
+    }
+    100% {
+        transform: translateY(0) scaleX(1);
+    }
+}
+
+.bounce {
+    animation: bounce 0.5s ease-out;
+}
+
+.title-fade {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    white-space: nowrap;
+}
+
+.title {
+    font-family: 'Source Code Pro', monospace;
+    color: black;
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.hero-buttons {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid 1px black;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 3vw;
+    font-weight: bold;
+    border-radius: 6px;
+    background-color: transparent;
+    box-shadow: 4px 4px 0px black; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.hero-buttons:hover {
+    transform: translateX(-50%) translateY(-0.5vw); 
+    box-shadow: 1vw 1vw 0px black; 
+    cursor: pointer;
+}
+
+.hero-buttons:active {
+    transform: translateX(5px) translateY(-0.5vw); 
+    box-shadow: 1vw 1vw 0px black; 
+    cursor: pointer;
+}
+
+.hidden-buttons {
+    display: none;
+}
+
+#aboutButton {
+    top: 50%;
+}
+
+#projectsButton {
+    top: 55%;
+}
+
+.socials {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: none;
+    white-space: nowrap;
+}
+
+.social-logos {
+    fill: black;
+    color: black;
+    margin: 0.5vw;
+    white-space: nowrap;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.social-logos:hover {
+    animation: bounce 0.5s ease-out;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .name-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-logos {
+        margin: 0.2vw;
+    }
+
+    .hidden-buttons {
+        display: flex;
+    }
+
+    .hero-buttons:hover {
+        transform: translateX(-50%) translateY(-0.5vw); 
+        box-shadow: 2vw 2vw 0px black; 
+        cursor: pointer;
+    }
+
+    .hero-buttons:active {
+        transform: translateX(50%) translateY(-0.5vw); 
+        box-shadow: 2vw 2vw 0px black; 
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
